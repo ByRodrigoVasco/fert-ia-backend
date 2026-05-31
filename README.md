@@ -9,7 +9,7 @@ Este projeto consiste em um backend para o sistema FertIA, um sistema que faz a 
 
 ## Como Executar
 ```bash
-
+python main.py
 ```
 
 ## Integrantes da Equipe

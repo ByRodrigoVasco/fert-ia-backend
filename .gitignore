@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Distribuição
+dist/
+build/
+*.egg-info/
+
+# Variáveis de ambiente
+.env
+
+# OS
+.DS_Store
+Thumbs.db
