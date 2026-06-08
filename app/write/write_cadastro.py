@@ -41,7 +41,7 @@ def atualizar_senha(email: str, nova_senha: str, caminho_arquivo: str) -> bool:
 
 def deletar_usuario(email: str, caminho_arquivo: str) -> bool:
     usuarios = carregar_usuarios(caminho_arquivo)
-    usuarios_restantes = [u for u in usuarios if u.get("email") == email]
+    usuarios_restantes = [u for u in usuarios if u.get("email") != email]
     if len(usuarios) == len(usuarios_restantes):
         return False
     with open(caminho_arquivo, "w") as arquivo:

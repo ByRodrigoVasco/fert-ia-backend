@@ -1,1 +1,2 @@
-{"nome": "Ana", "email": "ana.rcorreia@hotmail.com", "senha": "654321"}
+{"nome": "Mari", "email": "maricota@gmail.com", "senha": "123456"}
+{"nome": "Luluca", "email": "luluka@gmail.com", "senha": "123456"}
