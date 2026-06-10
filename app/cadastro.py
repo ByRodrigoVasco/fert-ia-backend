@@ -28,12 +28,13 @@ def read_cadastro():
         try:
             usuario = buscar_usuario(email, senha, _caminho_arquivo())
             if usuario is not None:
-                print(f"Login OK! Seja bem vindo, {usuario["nome"]}!")
-                break
+                print(f"Login OK! Seja bem vindo, {usuario['nome']}!")
+                return usuario
             else:
                 print("Email ou senha inválidos.")
         except Exception as e:
             print("Ocorreu um erro!", e)
+    return None
 
 def update_cadastro():
     print("\n=== Mudar Senha ===")

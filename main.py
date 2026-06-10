@@ -19,6 +19,7 @@ import os
 from app.validacao.validar_cadastro import validar_senha, email_existe
 from app.write.write_cadastro import salvar_usuario
 from app.cadastro import read_cadastro, update_cadastro, delete_cadastro
+from app.sensor_agua.sensor import create_sensor_data
 
 def _caminho_arquivo() -> str:
     pasta_data = os.path.join(os.path.dirname(__file__), "data")
@@ -55,7 +56,9 @@ def menu():
             if ok:
                 print(f"Usuario {usuario['nome']} cadastrado com sucesso!")
         elif opcao == "2":
-            read_cadastro()
+            usuario = read_cadastro()
+            if usuario is not None:
+                menu_logado(usuario)
         elif opcao == "3":
             update_cadastro()
         elif opcao == "4":
@@ -66,6 +69,19 @@ def menu():
         else:
             print("Opção inválida. Tente novamente.")
 
+def menu_logado(usuario):
+    print(f"\n=== Bem vindo, {usuario['nome']}! ===")
+    while True:
+        print("\n1 - Consultar sensor")
+        print("0 - Voltar")
+        opcao = input("\nEscolha uma opção: ").strip()
+        if opcao == "1":
+            create_sensor_data()
+        elif opcao == "0":
+            print("Voltando ao menu principal...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
 
 if __name__ == "__main__":
     menu()
