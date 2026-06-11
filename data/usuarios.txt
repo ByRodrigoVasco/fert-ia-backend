@@ -1,0 +1,3 @@
+{"nome": "Mari", "email": "maricota@gmail.com", "senha": "123456"}
+{"nome": "Luluca", "email": "luluka@gmail.com", "senha": "123456"}
+{"nome": "rodrigo", "email": "rodrigo@gmail.com", "senha": "123456"}
