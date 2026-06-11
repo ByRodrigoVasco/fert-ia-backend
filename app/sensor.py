@@ -1,12 +1,27 @@
+'''Módulo do sensor de água — leitura via porta serial.
+
+create_sensor_data()
+Abre a porta serial configurada (PORTA/BAUD), lê linhas do sensor e grava as
+leituras numéricas em data/sensor.txt. Encerra com Ctrl+C.'''
+
 import serial
 import os
+
+
+# === Configuração da porta serial ===
 
 PORTA = 'COM6'
 BAUD  = 115200
 
+
+# === Helper de caminho ===
+
 def _caminho_arquivo():
-    pasta_data = os.path.join(os.path.dirname(__file__), "..", "..", "data")
+    pasta_data = os.path.join(os.path.dirname(__file__), "..", "data")
     return os.path.join(pasta_data, "sensor.txt")
+
+
+# === Leitura do sensor ===
 
 def create_sensor_data():
     caminho = _caminho_arquivo()
